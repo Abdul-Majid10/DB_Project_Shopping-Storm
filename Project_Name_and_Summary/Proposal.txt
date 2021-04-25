@@ -1,0 +1,29 @@
+Name of Project:
+	Shopping Storm
+Group Members:
+	•	Abdul Majid (FA19-BSE-014)
+	•	Nabeel Amer (FA19-BSE-042)
+	•	Moiz Rasheed (FA19-BSE-064)
+Description:
+		In this project, we will be design and create an online shopping system whose name is Shopping Storm.
+	In this We will be covering various domains (clothes, tech products).  This site has two type of views 
+	one is admin view and other is user view. Admin and users have their own username and passwords to login. 
+	Only admin can add , delete, and  modify product information. User must be register as a buyer to place 
+	order online. When user will register himself at this time, we will be saving information like name, password,
+	age, gender, favorite color, etc. The user can select an item he wants to purchase, it will be placed in the
+	cart then he can pay through credit card, master card, jazz cash and easy pasia.
+	User can many other things in this website like
+		•	User can search product by name. 
+		•	User can filter products categories, price, and many other bases.
+		•	User can rate product after buying product. 
+Technologies and Tools:
+	Front-end:
+		•	HTML5
+		•	CSS3
+		•	JavaScript
+	Back-end:
+		•	PHP
+	Database and Query language:
+		•	SQL 
+	Server:
+		•	GitHub
