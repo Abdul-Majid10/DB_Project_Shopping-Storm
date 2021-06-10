@@ -29,10 +29,10 @@ CREATE TABLE Customer(
 
 CREATE TABLE Categories(
 	Category_ID varchar(5) PRIMARY KEY,
-	Category_Name varchar(10) CHECK (Category_Name IN ('Sneakers', 'Flip-Flops', 'Sandals',
-	'Slippers', 'Loafers','joggers','Baggy Pants', 'Jeans','Palazzo', 'Straight Pants','Leggings',
-	'Dress pants','Check pants',' Oxford Button-Down','Dress Shirt','Cuban Collar Shirt',
-	'Overshirt','Flannel Shirt','Office Shirt','Linen Shirt')),
+	Category_Name varchar(10) CHECK (Category_Name IN ('Sneakers', 'Flip-Flops', 
+	'Sandals', 'Slippers', 'Loafers','joggers','Baggy Pants', 'Jeans','Palazzo', 
+	'Straight Pants','Leggings', 'Dress pants','Check pants',' Oxford Button-Down',
+	'Dress Shirt','Overshirt','Flannel Shirt','Office Shirt','Linen Shirt')),
 	Category_Type varchar(10) CHECK (Category_Type IN ('Formal', 'InFormal, Casual')),
 );
 
@@ -44,8 +44,8 @@ CREATE TABLE Product(
 	Size varchar(15) NOT NULL,
 	Description varchar(225),
 	Price integer NOT NULL Default 0,
-	For_Gender char(1) CHECK (For_Gender = 'F' OR For_Gender = 'M' OR For_Gender = 'B') NOT NULL 
-	Default 'B',
+	For_Gender char(1) CHECK (For_Gender = 'F' OR For_Gender = 'M' OR For_Gender = 'B')
+	NOT NULL Default 'B',
 	Type varchar(30) NOT NULL CHECK (Type = 'FootWear' OR Type = 'Clotes'),
 	Quantity integer default 1,
 	AddBy varchar(5) FOREIGN KEY REFERENCES Admin(Admin_ID),
