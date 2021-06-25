@@ -107,7 +107,7 @@ CREATE TABLE Card_Info(
 
 CREATE TABLE Orders(
 	Order_ID varchar(5) PRIMARY KEY,
-	Address varchar(40) NOT NULL,
+	Address varchar(255) NOT NULL,
 	Amount integer CHECK (Amount >= 0),-- cart product sum
 	Cart_ID varchar(5) FOREIGN KEY REFERENCES Cart(Cart_ID) NOT NULL,
 	Card_No varchar(20) FOREIGN KEY REFERENCES Card_Info(Card_ID) NOT NULL
@@ -117,5 +117,4 @@ CREATE TABLE Orders(
 --add cart_ID
 --Alter Table Orders Alter COLUMN Address varchar(255);
 
-Drop Table Orders;
 SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'

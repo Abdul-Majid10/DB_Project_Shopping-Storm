@@ -8,9 +8,7 @@ INSERT INTO Admin VALUES('AD002','Waseem','Bajwa','01-01-1996',27,'iam.Waseem@ga
 						'iamWaseem','house#109, Mughal Pura lahore, Punjab','M','03160485774');
 INSERT INTO Admin VALUES('AD003','Yasmeen',NULL,'01-01-1985',36,'iam.Yasmeen@gamil.com',
 						'iamYasmeen','house#7, Paktown, Chungi Amer Sidhu,lahore, Punjab','F',NULL);
-TRUNCATE Table Admin; --Not working
-SELECT *FROM Admin;
-DELETE FROM Admin-- working
+
 
 --TABLE Customer
 
@@ -74,11 +72,9 @@ INSERT INTO Customer VALUES('CU014','Arslan','Palmer','9-4-1983',38,
 							'nichoj@att.net','6SoSelIPC3SH','65-Chenab Market Madina Town,lahore,
 							Punjab','M','03222227313');
 
-
 INSERT INTO Customer VALUES('CU015','Tadhg','Lewis','3-31-1986',35,
 							'kuparine@mac.com','14vkV4WI10sJ','26-b, Lalazar,lahore,
 							Punjab','M','03421111313');
-
 
 INSERT INTO Customer VALUES('CU016','Klara','Doherty','3-18-1991',32,
 							'becchi@comcast.net','J4sc2kKMNW3x','16/B, Committe Chowk,lahore,
@@ -123,8 +119,6 @@ INSERT INTO Customer VALUES('CU025','Janae','Ritter','2-12-2015',5,
 							'rhialto@yahoo.ca','3em3RJ8apm49','Khanewal Road,lahore,
 							Punjab','F','03425678313');
 
-SELECT * From Customer;
-
 --TABLE Categories
 
 INSERT INTO Categories VALUES ('CA001','Sneakers','Formal');
@@ -153,8 +147,6 @@ INSERT INTO Categories VALUES ('CA023','Jeans','Formal');
 INSERT INTO Categories VALUES ('CA024','Jeans','InFormal');
 INSERT INTO Categories VALUES ('CA025','Palazzo','InFormal');
 INSERT INTO Categories VALUES ('CA026','Leggings','InFormal');
-
-Select * From Categories;
 
 -- TABLE Product
 
@@ -219,8 +211,6 @@ simply dummy text of the printing and typesetting industry.',5499,'M','Clothes',
 INSERT INTO Product Values ('PR015','DARK BLUE SLIM FIT JEANS','J.','Blue','38','Lorem Ipsum is
 simply dummy text of the printing and typesetting industry.',3499,'B','Clothes','100',
 'AD003','CA023');
-
-Select * from Product;
 
 -- TABLE Images
 
@@ -299,10 +289,6 @@ INSERT INTO Images Values ('PR014',
 INSERT INTO Images Values ('PR015',
 'https://brumano.b-cdn.net/wp-content/uploads/2020/09/Dark-Blue-Slim-Fit-Jeans-for-mens-min.jpg');
 
-Select * from Images;
-
-
-
 -- TABLE Cart
 
 INSERT INTO Cart VALUES('CI001','CU001');
@@ -350,11 +336,6 @@ INSERT INTO Cart_Product VALUES('CI006','PR013');
 INSERT INTO Cart_Product VALUES('CI019','PR010');
 INSERT INTO Cart_Product VALUES('CI020','PR004');
 
-SELECT * FROM Cart_Product
-
-SELECT Cart_ID, SUM(Product.Price) from Cart_Product INNER Join Product On Cart_Product.Product_ID = Product.Product_ID
-Group by Cart_ID 
-
 -- TABLE Reviews
 
 INSERT INTO Reviews VALUES('RE001','PR001','CU001',1);
@@ -383,26 +364,45 @@ INSERT INTO Card_Info VALUES('4499 1170 7243 1846','Bank','CU020');
 
 INSERT INTO Orders VALUES('OR001','house#7, Paktown, Chungi Amer Sidhu,lahore,
 							Punjab',23497,'CI001','4024 1467 8773 5427');
+
 INSERT INTO Orders VALUES('OR002','Sector 24 Korangi Industrial Area,lahore,
 							Punjab',4999,'CI010','03424227313');
-INSERT INTO Orders VALUES('OR003','44 H-2 Wapda Town, 
-							P.O. Box: Lahore Punjab',5998,'CI003','4116 9740 5626 8401');
+
+INSERT INTO Orders VALUES('OR003','44 H-2 Wapda Town, P.O. Box: Lahore Punjab'
+							,5998,'CI003','4116 9740 5626 8401');
+
 INSERT INTO Orders VALUES('OR004','Street:  B2 the 8th Floor,
 							Times Business Center,Jiyang Avenue,lZhuji,
 							China street',2499,'CI005','03014595086');
+
 INSERT INTO Orders VALUES('OR005','C/3 Gulshan-e-Behar, Orangi Town, Karachi,lahore'
 							,14999,'CI018','4475 1161 8263 3117');
+
 INSERT INTO Orders VALUES('OR006','26-b, Lalazar,lahore,
 							Punjab',5499,'CI015','4672 4934 4211 8556');
+
 INSERT INTO Orders VALUES('OR007','Shop # 92, Saddar,lahore,
 							Punjab',2999,'CI011','03424227433');
+
 INSERT INTO Orders VALUES('OR008',' Heaven-1, Mubarak Pura,lahore,
 							Punjab',2499,'CI012','4437 4819 6805 2776');
+
 INSERT INTO Orders VALUES('OR009','Street:  Sector 12-D,Karachi,
 							 Sindh',7499,'CI006','03014595012');
-INSERT INTO Orders VALUES('OR010','Comsats Uni Lahore pakistan',399,'CI019','4323 8625 7313 1427');
-INSERT INTO Orders VALUES('OR011','house#7,
-							Paktown, Chungi Amer Sidhu,lahore,
+
+INSERT INTO Orders VALUES('OR010','Comsats Uni Lahore pakistan',
+							399,'CI019','4323 8625 7313 1427');
+
+INSERT INTO Orders VALUES('OR011','house#7, Paktown, Chungi Amer Sidhu,lahore,
 							Punjab',2999,'CI020','4499 1170 7243 1846');
 
-Select * FROM Orders;
+SELECT * FROM Admin;
+SELECT * FROM Customer;
+SELECT * FROM Categories;
+SELECT * FROM Product;
+SELECT * FROM Images;
+SELECT * FROM Cart;
+SELECT * FROM Cart_Product;
+SELECT * FROM Reviews;
+SELECT * FROM Card_Info;
+SELECT * FROM Orders;

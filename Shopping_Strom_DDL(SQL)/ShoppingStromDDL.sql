@@ -5,58 +5,36 @@ CREATE TABLE Admin(
 	Admin_ID varchar(5) PRIMARY KEY,
 	F_Name varchar(15) NOT NULL,
 	L_Name varchar(20),
-	DOB DATE, -- DOB DATE CHECK (DOB < SYSDATETIME()),
+	DOB DATE CHECK (DOB < SYSDATETIME()),
 	Age INT CHECK (Age > 5),
 	Email varchar(30) UNIQUE NOT NULL,
 	Password varchar(20) NOT NULL,
-	Address varchar(40), --Address varchar(225),
+	Address varchar(225),
 	Gender char(1) CHECK (Gender = 'F' OR Gender = 'M') NOT NULL, 
-	Phone_No integer --Phone_No varchar(15)
+	Phone_No varchar(15)
 );
-
---Changings
---Alter Table Admin ADD Constraint DOB Check (DOB < SYSDATETIME());
---Alter Table Admin Alter COLUMN Phone_No varchar(15);
---Alter Table Admin Alter COLUMN Address varchar(255);
 
 CREATE TABLE Customer(
 	Customer_ID varchar(5) PRIMARY KEY,
 	F_Name varchar(15) NOT NULL,
 	L_Name varchar(20),
-	DOB DATE, ---- DOB DATE CHECK (DOB < SYSDATETIME()),
+	DOB DATE CHECK (DOB < SYSDATETIME()),
 	Age INT CHECK (Age > 0),
 	Email varchar(30) UNIQUE NOT NULL,
 	Password varchar(20) NOT NULL,
-	Address varchar(40), --Address varchar(225),
+	Address varchar(225),
 	Gender char(1) CHECK (Gender = 'F' OR Gender = 'M') NOT NULL, 
-	Phone_No integer ----Phone_No varchar(15)
+	Phone_No varchar(15)
 );
-
---Changings
---Alter Table Customer ADD Constraint C_DOB Check (DOB < SYSDATETIME());
---Alter Table Customer Alter COLUMN Phone_No varchar(15);
---Alter Table Customer Alter COLUMN Address varchar(255);
 
 CREATE TABLE Categories(
 	Category_ID varchar(5) PRIMARY KEY,
-	Category_Name varchar(10) CHECK (Category_Name IN ('Sneakers', 'Flip-Flops', 
+	Category_Name varchar(25) CHECK (Category_Name IN ('Sneakers', 'Flip-Flops', 
 	'Sandals', 'Slippers', 'Loafers','joggers','Baggy Pants', 'Jeans','Palazzo', 
 	'Straight Pants','Leggings', 'Dress pants','Check pants',' Oxford Button-Down',
 	'Dress Shirt','Overshirt','Flannel Shirt','Office Shirt','Linen Shirt')),
-	--varchar(25) new
-	--Category_Type varchar(10) CHECK (Category_Type IN ('Formal', 'InFormal, Casual')),
 	Category_Type varchar(10) CHECK (Category_Type IN ('Formal', 'InFormal', 'Casual'))
 );
-
---Changings
---ALTER TABLE Categories
---DROP CONSTRAINT CK__Categorie__Categ__412EB0B6;
-
---ALTER TABLE Categories
---ADD CONSTRAINT CK__Categorie__Categ__412EB0B CHECK (Category_Type IN ('Formal', 'InFormal', 'Casual'));
-
---Alter Table Categories Alter COLUMN Category_Name varchar(25);
-
 
 CREATE TABLE Product(
 	Product_ID varchar(5) PRIMARY KEY,
@@ -107,15 +85,10 @@ CREATE TABLE Card_Info(
 
 CREATE TABLE Orders(
 	Order_ID varchar(5) PRIMARY KEY,
-	Address varchar(40) NOT NULL,
+	Address varchar(255) NOT NULL,
 	Amount integer CHECK (Amount >= 0),-- cart product sum
 	Cart_ID varchar(5) FOREIGN KEY REFERENCES Cart(Cart_ID) NOT NULL,
 	Card_No varchar(20) FOREIGN KEY REFERENCES Card_Info(Card_ID) NOT NULL
 );
 
--- chaging 
---add cart_ID
---Alter Table Orders Alter COLUMN Address varchar(255);
-
-Drop Table Orders;
-SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'
+SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE';
