@@ -382,37 +382,27 @@ INSERT INTO Card_Info VALUES('4499 1170 7243 1846','Bank','CU020');
 -- TABLE Orders
 
 INSERT INTO Orders VALUES('OR001','house#7, Paktown, Chungi Amer Sidhu,lahore,
-							Punjab',23497,'8-10-2016','CI001','4024 1467 8773 5427');
-
+							Punjab',23497,'CI001','4024 1467 8773 5427');
 INSERT INTO Orders VALUES('OR002','Sector 24 Korangi Industrial Area,lahore,
-							Punjab',4999,'9-16-2016','CI010','03424227313');
-
-INSERT INTO Orders VALUES('OR003','44 H-2 Wapda Town, P.O. Box: Lahore Punjab'
-							,5998,'11-17-2016','CI003','4116 9740 5626 8401');
-
+							Punjab',4999,'CI010','03424227313');
+INSERT INTO Orders VALUES('OR003','44 H-2 Wapda Town, 
+							P.O. Box: Lahore Punjab',5998,'CI003','4116 9740 5626 8401');
 INSERT INTO Orders VALUES('OR004','Street:  B2 the 8th Floor,
 							Times Business Center,Jiyang Avenue,lZhuji,
-							China street',2499,'10-7-2020','CI005','03014595086');
-
+							China street',2499,'CI005','03014595086');
 INSERT INTO Orders VALUES('OR005','C/3 Gulshan-e-Behar, Orangi Town, Karachi,lahore'
-							,14999,'06-26-2021','CI018','4475 1161 8263 3117');
-
+							,14999,'CI018','4475 1161 8263 3117');
 INSERT INTO Orders VALUES('OR006','26-b, Lalazar,lahore,
-							Punjab',5499,'10-17-2019','CI015','4672 4934 4211 8556');
-
+							Punjab',5499,'CI015','4672 4934 4211 8556');
 INSERT INTO Orders VALUES('OR007','Shop # 92, Saddar,lahore,
-							Punjab',2999,'4-9-2019','CI011','03424227433');
-
+							Punjab',2999,'CI011','03424227433');
 INSERT INTO Orders VALUES('OR008',' Heaven-1, Mubarak Pura,lahore,
-							Punjab',2499,'8-7-2018','CI012','4437 4819 6805 2776');
-
+							Punjab',2499,'CI012','4437 4819 6805 2776');
 INSERT INTO Orders VALUES('OR009','Street:  Sector 12-D,Karachi,
-							 Sindh',7499,'05-20-2021','CI006','03014595012');
-
-INSERT INTO Orders VALUES('OR010','Comsats Uni Lahore pakistan',
-							399,'9-25-2017','CI019','4323 8625 7313 1427');
-
-INSERT INTO Orders VALUES('OR011','house#7, Paktown, Chungi Amer Sidhu,lahore,
-							Punjab',2999,'5-1-2020','CI020','4499 1170 7243 1846');
+							 Sindh',7499,'CI006','03014595012');
+INSERT INTO Orders VALUES('OR010','Comsats Uni Lahore pakistan',399,'CI019','4323 8625 7313 1427');
+INSERT INTO Orders VALUES('OR011','house#7,
+							Paktown, Chungi Amer Sidhu,lahore,
+							Punjab',2999,'CI020','4499 1170 7243 1846');
 
 Select * FROM Orders;
